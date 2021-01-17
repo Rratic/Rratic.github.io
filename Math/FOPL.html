@@ -13,12 +13,32 @@
 
         <div id="import">
             <h2>导入符号</h2>
-            <p>原子命题</p>
-            <code>P(a)</code>
+            <p>原子命题 P(a)<br>
+                任意 &forall;a:P(a)<br>
+                存在 &exist;a:P(a)<br>
+                合取 a&and;b<br>
+                析取 a&or;b<br>
+                否定 &not;a<br>
+                蕴含 a&rightarrow;b<br>
+                括号 (a)<br>
+                逗号 a,b<br>
+                <!---逗号存疑--->
+            </p>
         </div>
         <div id="rules">
             <div id="equal">
                 <h2>等价规则</h2>
+                <p>
+                    蕴含等价<code>A&rightarrow;B等价&not;A&or;B</code><br>
+                    全称否定<code>&not;&forall;a:P(a)等价&exist;a:P(a)</code><br>
+                    存在否定<code>&not;&exist;a:P(a)等价&forall;a:P(a)</code><br>
+                    与否定<code>&not;(A&and;B)等价&not;A&or;&not;B</code><br>
+                    或否定<code>&not;(A&or;B)等价&not;A&and;&not;B</code><br>
+                    双重否定<code>&not;&not;A等价A</code><br>
+                    全称重排<code>等价</code><br>
+                    存在重排<code>等价</code><br>
+                    <!---未找到全称/存在重排相关资料--->
+                </p>
             </div>
             <div id="infer">
                 <h2>推理规则</h2>

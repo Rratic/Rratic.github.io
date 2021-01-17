@@ -1,4 +1,5 @@
-code{background-color:lightgray;color:darkgray;font-weight:bold;}
-header{background-color:orange;}
-main{padding-bottom:100px;background-color:yellow;}
-footer{position:absolute;bottom:0;width:100%;height:100px;background-color:greenyellow;}
+h2,h3,h4,h5,h6,p{color: white;}
+code{background-color:lightgray;color:orangered;font-size: 150%;font-family: 'Times New Roman', Times, serif;}
+header{background-color:darkorange;}
+main{padding-bottom:100px;background-color:black;}
+footer{position:absolute;bottom:0;width:100%;height:100px;background-color:black;}
