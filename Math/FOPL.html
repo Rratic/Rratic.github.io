@@ -15,7 +15,8 @@
 
         <div id="import">
             <h2>导入符号</h2>
-            <p>原子命题 P(a)<br>
+            <p>
+                原子命题 P(a)<br>
                 任意 &forall;a:P(a)<br>
                 存在 &exist;a:P(a)<br>
                 合取 a&and;b<br>
@@ -44,6 +45,24 @@
             </div>
             <div id="infer">
                 <h2>推理规则</h2>
+                <p>
+                    与化简<code>A&and;B推出A</code><br>
+                    与推广<code>A与B推出A&and;B</code><br>
+                    或推广<code>A&or;B推出两个分支A，B</code><br>
+                    或否<code>A&or;B&and;(&not;)A推出B</code><br>
+                    或推广<code>A推出A&or;B</code><br>
+                    演绎推理<code>A&rightarrow;B&and;A推出B</code><br>
+                    全称消除<code>&forall;a:P(a)推出</code><br>
+                    存在消除<code>&exist;a:P(a)推出</code><br>
+                    <!---总觉得不严谨，这里应该是建立了一个推理“树”--->
+                </p>
+            </div>
+            <div id="special">
+                <h2>简单的命题，读者自证不难</h2>
+                <p>
+                    排中律<code>&forall;A:A&or;&not;A</code><br>
+                    蕴含等价<code>(A&rightarrow;B&and;B&rightarrow;C)&rightarrow;A&rightarrow;C</code><br>
+                </p>
             </div>
         </div>
     </main>
