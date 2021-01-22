@@ -7,22 +7,22 @@
     <title>自然科学大厦矗立于此</title>
     <link rel="stylesheet" type="text/css" href="css/mycss.css">
     <link rel="shortcut icon" href="favicon.ico">
+    <script src="script/randtext.js"></script>
 </head>
 
-<body>
+<body onload="randtext();">
     <header>
         <p>一个自然科学公理化结构的“镜像”</p>
     </header>
     <main>
         <details>
-            <summary>
-                I.公理化数学
-            </summary>
+            <summary style="font-size:200%;">I.公理化数学</summary>
             <details>
                 <summary>一、根基</summary>
                 <ol>
-                    <li><a href="Math/FOPL.html">一阶谓词逻辑</a></li>
+                    <li><a href="Math/FirstOrderLogic.html">一阶逻辑</a></li>
                     <li><a href="Math/ZFC.html">Zermelo-Frankel选择集合论</a></li>
+                    <!---ZFC axiomatic set theory system--->
                     <li><a href="Math/NBG.html">NBG集合论</a></li>
                     <li><a href="Math/TwoOrderLogic">二阶逻辑</a></li>
                     <li><a href="Math/GroupTheory.html">群论</a></li>
@@ -61,20 +61,25 @@
             </details>
         </details>
         <details>
-            <summary>II.公理化物理</summary>
+            <summary style="font-size:200%;">II.公理化物理</summary>
         </details>
         <details>
-            <summary>O.想看点别的？</summary>
+            <summary style="font-size:150%;color: darkorange;">O.想看点别的？</summary>
             <ul>
                 <li><a href="https://dccxi.com/trust/">博弈论游戏</a></li>
+                <li><a href="https://visualgo.net/zh">可视化算法</a></li>
+                <li><a href="https://esolangs.org/wiki/Main_Page">非主流编程语言</a></li>
             </ul>
         </details>
         <details>
-            <summary>U.未分类</summary>
+            <summary style="font-size:150%;color: grey;">U.未分类</summary>
             <li><a>CTL时序推理</a></li>
         </details>
         <!---我不知道这个标签会不会被用到，但是总有奇奇怪怪的东西--->
         <!---竟然用到了！--->
+        <div id="randtext">
+            <p></p>
+        </div>
     </main>
     <footer>
         <code>
