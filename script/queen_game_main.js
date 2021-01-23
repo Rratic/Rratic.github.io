@@ -22,7 +22,7 @@ function tellwiner() {
 }
 function fillqueen(x, y, color) {
     draw.fillStyle = color;
-    draw.fillRect(x * qsize, y * qsize, x * qsize + qsize - 1, y * qsize + qsize - 1);
+    draw.fillRect(x * qsize, y * qsize, qsize, qsize);
 }
 function picinit() {
     draw.fillStyle = bc;
@@ -48,6 +48,7 @@ function queenmove(e) {
         window.alert(info);
         queen_1_x = 0; queen_1_y = 0; queen_2_x = 7; queen_2_y = 8; thisq = 1;
         picinit();
+        return;
     }
     fillqueen(tx, ty, bc);
     fillqueen(mox, moy, tc);
