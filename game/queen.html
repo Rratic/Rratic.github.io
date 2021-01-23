@@ -6,10 +6,12 @@
     <title>皇后棋</title>
 </head>
 
-<body onload="queengame();">
+<body onload="queeninit();">
     <canvas id="queen_game" style="position:fixed;top:0;left:0;" width="512" height="576"
-        onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></canvas>
+        onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"
+        onclick="queenmove(event);"></canvas>
     <div id="xycoordinates" style="position:absolute;top:576px;left:0;"></div>
+    <div id="gameinfo" style="position:absolute;top:624px;left:0;font-size:300%;"></div>
 </body>
 
 </html>
