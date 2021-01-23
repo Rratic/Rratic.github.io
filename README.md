@@ -3,6 +3,8 @@
 
 一个自然科学公理化结构的“镜像”
 
-[Github Page](https://rratic.github.io/)
+[索引页](https://rratic.github.io/)
 
-求支持qaq
+[【双人】皇后棋](https://rratic.github.io/game/queen.html)
+
+求支持（点赞）qaq
