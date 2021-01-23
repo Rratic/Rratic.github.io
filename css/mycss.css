@@ -1,4 +1,5 @@
 code{background-color:#eee;color:#111;font-size: 100%;}
-header{background-color:darkorange;}
-main{padding-bottom:100px;background-color:darkkhaki;}
-footer{background-color:black;}
+header{position:fixed;left:0;top:0;height:48px;width:100%;background-color:darkorange;}
+main{position:absolute;left:0;top:48px;width:100%;background-color:darkkhaki;}
+footer{position:fixed;left:0;bottom:0;width: 100%;background-color:black;}
+a{color: green;}
