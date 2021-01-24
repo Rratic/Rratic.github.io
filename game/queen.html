@@ -4,14 +4,17 @@
 <head>
     <script src="../script/queen_game_main.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/mycss.css">
-    <title>皇后棋1.0.0</title>
+    <title>皇后棋1.1.0</title>
 </head>
 
 <body onload="queeninit();">
     <canvas id="queen_game" style="position:fixed;top:0;left:0;" width="512" height="576"
-        onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"
-        onclick="queenmove(event);"></canvas>
-    <div id="xycoordinates" style="position:absolute;top:576px;left:0;"></div>
+        onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()" onclick="queenmove(event);">
+        <img src="../img/queen-space.png"></img>
+        <!---预加载--->
+        加载中……
+    </canvas>
+    <div id="xycoordinates" style="position:absolute;top:576px;left:0;">提示区</div>
     <div id="gameinfo" style="position:absolute;top:624px;left:0;font-size:200%;">
         <a href="queen-help.html" target="_blank">玩法介绍</a>
     </div>

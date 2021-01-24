@@ -1,4 +1,4 @@
-var length = 8, height = 9, qsize = 64, mox, moy, thisq, tx, ty, ex, ey, tc, bc = "#57579F", wall = "#7F7F7F";
+var length = 8, height = 9, qsize = 64, mox, moy, thisq, tx, ty, ex, ey, tc, bc, wall = "#7F7F7F", s1, s2;
 var queen_1_x, queen_1_y, queen_1_show = "#EF4507";
 var queen_2_x, queen_2_y, queen_2_show = "#45EF07";
 var thiscanvas, draw, info, map;
@@ -15,16 +15,18 @@ function cnvs_getCoordinates(e) {
     document.getElementById("xycoordinates").innerHTML = "坐标：(" + mox + "," + moy + ")，轮到【" + info + "】方";
 }
 function cnvs_clearCoordinates() {
-    document.getElementById("xycoordinates").innerHTML = "";
+    if (thisq == 1) info = "红";
+    else info = "绿";
+    document.getElementById("xycoordinates").innerHTML = "轮到【" + info + "】方";
 }
 function tellwiner(infor) {
     switch (infor) {
-        case 1: info = "红方“食用”了绿方"; break;
-        case 2: info = "绿方“食用”了红方"; break;
-        case -1: info = "红方无路可走"; break;
-        case -2: info = "绿方无路可走"; break;
+        case 1: info = "红方“食用”了绿方"; ++s1; break;
+        case 2: info = "绿方“食用”了红方"; ++s2; break;
+        case -1: info = "红方无路可走"; ++s2; break;
+        case -2: info = "绿方无路可走"; ++s1; break;
     }
-    document.getElementById("gameinfo").innerHTML = info;
+    document.getElementById("gameinfo").innerHTML = s1 + ":" + s2;
 }
 function fillqueen(x, y, color) {
     draw.fillStyle = color;
@@ -32,8 +34,8 @@ function fillqueen(x, y, color) {
 }
 function picinit() {
     queen_1_x = 0; queen_1_y = 0; queen_2_x = length - 1; queen_2_y = height - 1; thisq = 1;
-    draw.fillStyle = bc;
-    draw.fillRect(0, 0, length * qsize, height * qsize);
+    draw.fillStyle = draw.createPattern(bc, "repeat");
+    draw.fillRect(0, 0, qsize * length, qsize * height);
     fillqueen(queen_1_x, queen_1_y, queen_1_show);
     fillqueen(queen_2_x, queen_2_y, queen_2_show);
     map = new Array();
@@ -49,6 +51,10 @@ function picinit() {
 function queeninit() {
     thiscanvas = document.getElementById("queen_game");
     draw = thiscanvas.getContext("2d");
+    bc = new Image();
+    bc.src = "../img/queen-space.png";
+    s1 = 0;
+    s2 = 0;
     picinit();
 }
 function canmove(step, x, y) {
@@ -62,7 +68,8 @@ function canmove(step, x, y) {
 }
 function showmove(step, x, y) {
     map[tx][ty] = 3;
-    fillqueen(tx, ty, wall);
+    if (thisq == 1) fillqueen(tx, ty, "#AF2503");
+    else fillqueen(tx, ty, "#25AF03");
     var tempx = tx, tempy = ty;
     for (var i = 1; i <= step; ++i) {
         tempx += x; tempy += y;
@@ -92,6 +99,7 @@ function queenmove(e) {
     else { tx = queen_2_x; ty = queen_2_y; tc = queen_2_show; ex = queen_1_x; ey = queen_1_y; }
     if (tx == mox && ty == moy) {
         window.alert("不允许原地不动！");
+        console.log("彩蛋：IOI AK I");
         return;
     }
     if (tx != mox && ty != moy && tx - mox != ty - moy && tx - mox != moy - ty) {
@@ -125,4 +133,5 @@ function queenmove(e) {
     if (thisq == 1) { queen_1_x = mox; queen_1_y = moy; }
     else { queen_2_x = mox; queen_2_y = moy; }
     thisq = 3 - thisq;
+    cnvs_getCoordinates(e);
 }
