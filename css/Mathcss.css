@@ -1,5 +1,5 @@
-h2,h3,h4,h5,h6,p{color: white;}
-code{background-color:lightgray;color:orangered;font-size: 125%;font-family: 'Times New Roman', Times, serif;}
-header{background-color:darkorange;}
-main{padding-bottom:100px;background-color:black;}
-footer{position:absolute;bottom:0;width:100%;height:100px;background-color:black;}
+h2,h3,h4,h5,h6,p,li{color: white;}
+code{background-color:lightgray;color:orangered;font-size: 125%;font-family: 'Courier New', Courier, monospace;}
+header{position:fixed;left:0;top:0;;width:100%;background-color:darkorange;}
+main{position:absolute;left:0;top:72px;width:100%;background-color:black;}
+footer{position:fixed;left:0;bottom:0;width:100%;background-color:black;}

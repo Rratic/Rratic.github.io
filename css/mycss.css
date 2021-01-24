@@ -3,3 +3,4 @@ header{position:fixed;left:0;top:0;height:48px;width:100%;background-color:darko
 main{position:absolute;left:0;top:48px;width:100%;background-color:darkkhaki;}
 footer{position:fixed;left:0;bottom:0;width: 100%;background-color:black;}
 a{color: green;}
+summary{font-family: Consolas, 'Courier New', monospace;}
