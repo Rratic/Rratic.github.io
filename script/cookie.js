@@ -25,7 +25,7 @@ function checkCookie() {
     else {
         user = prompt("请输入用户名", "");
         if (user != "" && user != null) {
-            setCookie("username", user, 365);
+            setCookie("username", user, 36500);//百年之约
         }
     }
 }

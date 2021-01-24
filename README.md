@@ -5,6 +5,10 @@
 
 除特殊声明，内容均遵循MIT协议
 
+---
+
+### 本站游戏
+
 [索引页](https://rratic.github.io/)
 
 [【双人】皇后棋](https://rratic.github.io/game/queen.html)
