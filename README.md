@@ -7,10 +7,10 @@
 
 ---
 
-### 本站游戏
-
 [索引页](https://rratic.github.io/)
+
+### 本站游戏
 
 [【双人】皇后棋](https://rratic.github.io/game/queen.html)
 
-求支持（点赞）qaq
+求支持，请点亮star，不要下次一定qaq

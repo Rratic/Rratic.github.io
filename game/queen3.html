@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../script/queen3.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/mycss.css">
+    <title>3D皇后棋0.1.0</title>
+</head>
+
+<body onload="queeninit();">
+    <canvas id="queen_game" style="position:fixed;top:0;left:0;" width="672" height="240" onmousemove="showcoord(event)"
+        onmouseout="clearcoord()" onclick="queenmove(event);">
+        <img src="../img/queen-space.png"></img>
+        <!---预加载--->
+        加载中……
+    </canvas>
+    <div id="buttons" style="position: absolute;top: 0;left: 672px;">
+        <button type="button" onclick="changeorder();">强制切换先后手</button><br>
+        <button type="button" onclick="clearboard();">清空计分板</button><br>
+    </div>
+    <div id="coord" style="position:absolute;top:240px;left:0;">提示区</div>
+    <div id="gameinfo" style="position:absolute;top:288px;left:0;font-size:200%;">
+        <a href="queen-help.html" target="_blank">轮到【红】方</a>
+    </div>
+    <footer>
+        <a href="https://github.com/Rratic/Rratic.github.io" target="_blank">源代码</a>
+    </footer>
+</body>
+
+</html>

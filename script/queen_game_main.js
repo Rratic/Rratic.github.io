@@ -135,5 +135,6 @@ function queenmove(e) {
     thisq = 3 - thisq;
     cnvs_getCoordinates(e);
 }
-function changeorder() { thisq = 3 - thisq; }
+function changeorder() { thisq = 3 - thisq; cnvs_clearCoordinates(); }
 function clearboard() { s1 = 0; s2 = 0; tellwiner(0); }
+function check3dversion() { window.alert("咕咕咕~"); }

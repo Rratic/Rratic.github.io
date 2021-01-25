@@ -4,7 +4,7 @@
 <head>
     <script src="../script/queen_game_main.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/mycss.css">
-    <title>皇后棋1.2.0</title>
+    <title>皇后棋1.2.1</title>
 </head>
 
 <body onload="queeninit();">
@@ -17,8 +17,9 @@
     <div id="buttons" style="position: absolute;top: 0;left: 512px;">
         <button type="button" onclick="changeorder();">强制切换先后手</button><br>
         <button type="button" onclick="clearboard();">清空计分板</button><br>
+        <button type="button" onclick="check3dversion();">查看3D皇后棋</button>
     </div>
-    <div id="xycoordinates" style="position:absolute;top:576px;left:0;">提示区</div>
+    <div id="xycoordinates" style="position:absolute;top:576px;left:0;">轮到【红】方</div>
     <div id="gameinfo" style="position:absolute;top:624px;left:0;font-size:200%;">
         <a href="queen-help.html" target="_blank">玩法介绍</a>
     </div>
