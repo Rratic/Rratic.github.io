@@ -4,9 +4,10 @@
 <head>
     <title>自然科学大厦矗立于此</title>
     <link rel="stylesheet" type="text/css" href="css/Mathcss.css">
+    <script src="script/count.js"></script>
 </head>
 
-<body>
+<body onload="countvisit();">
     <header>
         <h1>我掉过的坑合集</h1>
     </header>
@@ -16,6 +17,7 @@
             <li>要使用<code>top</code>等位置标签不能使用默认<code>position</code></li>
             <li>加载完图片才能使用<code>javascript</code>绘制</li>
         </ol>
+        <div id="countvisit"></div>
     </main>
     <footer>
         <code>
