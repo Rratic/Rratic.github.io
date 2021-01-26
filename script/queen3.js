@@ -35,3 +35,48 @@ bc=new Image();bc.src="../img/queen-space.png";s1=0;s2=0;picinit();}//初始化
 function canmove(step,x,y,z){tex=tx,tey=ty,tez=tz;
 for(var i=1;i<=step;++i){tex+=x;tey+=y;tez+=z;var teb=map[tex][tey][tez];
 if(teb==1||(i!=step&&teb==2))return false;}return true;}
+
+function showmove(step,x,y,z){
+map[tx][ty][tz]=1;
+if(thisq==1)fillqueen(tx,ty,tz,"#AF2503");
+else fillqueen(tx,ty,tz,"#25AF03");
+tex=tx,tey=ty;tez=tz;
+for(var i=0;i<step;++i){
+tex+=x;tey+=y;tez+=z;
+console.log(tex+","+tey+","+tez);
+map[tex][tey][tez]=1;
+fillqueen(tex,tey,tez,"#7F7F7F");}
+map[mox][moy][moz]=2;
+fillqueen(mox,moy,moz,tc);}
+
+function trapped(x,y,z){var flag=true;
+for(var i=0;i<26;++i){tex=x+onestep[i][0],tey=y+onestep[i][1],tez+=z+onestep[i][2];
+if(inbound(tex,tey,tez))if(map[tex][tey][tez]!=1)flag=false;}
+if(flag)return true;return false;}
+
+function queenmove(e){//核心
+var x,y,z;
+if(!loadmo(e)){window.alert("出界！");return;};
+if(thisq==1){tx=q1x;ty=q1y;tz=q1z;tc=q1c;ex=q2x;ey=q2y;ez=q2z;}
+else{tx=q2x;ty=q2y;tz=q2z;tc=q2c;ex=q1x;ey=q1y;ez=q1z;}
+if(tx==mox&&ty==moy&&tz==moz){window.alert("不允许原地不动！");return;}
+step=Math.max(Math.abs(mox-tx),Math.abs(moy-ty),Math.abs(moz-tz));var flag=false;
+for(var i=0;i<26;++i){if(tx+step*onestep[i][0]==mox&&ty+step*onestep[i][1]==moy&&tz+step*onestep[i][2]==moz)flag=true;}
+if(!flag){window.alert("无效的移动！");return;}
+x=(mox-tx)/step;y=(moy-ty)/step;z=(moz-tz)/step;
+    console.log(x+","+y+","+z);
+if(!canmove(step,x,y,z)){
+window.alert("你被挡住了！");return;}
+showmove(step,x,y,z);
+if(mox==ex&&moy==ey&&moz==ez){
+tellwiner(thisq);window.alert(info);
+picinit();return;}
+if(trapped(mox,moy,moz)){
+tellwiner(-thisq);window.alert(info);
+picinit();return;}
+if(trapped(ex,ey,ez)){
+tellwiner(thisq-3);window.alert(info);
+picinit();return;}
+if(thisq==1){q1x=mox;q1y=moy;q1z=moz;}
+else{q2x=mox;q2y=moy;q2z=moz;}
+thisq=3-thisq;showcoord(e);}
