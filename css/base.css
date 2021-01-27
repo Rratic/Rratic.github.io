@@ -1,0 +1,52 @@
+/*遵循MIT协议*/
+p,li{
+    font-size:14px;
+}
+h2{
+    color:silver;
+    font-size:24px;
+}
+h3{
+    color:lightpink;
+    font-size:18px;
+}
+th{
+    background-color:darksalmon;
+}
+code{
+    background-color:lightgray;
+    color:orangered;
+    font-size:16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    position:fixed;
+    left:0;
+    top:0;
+    height:72px;
+    width:100%;
+    background-color:darkorange;
+    font-size:16px;
+}
+main{
+    position:absolute;
+    left:0;
+    top:72px;
+    width:100%;
+    color:white;
+    background-color:black;
+}
+.define{
+    color:lawngreen;
+}
+#source{
+    font-size:12px;
+    color:yellowgreen;
+}
+footer{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color:black;
+}

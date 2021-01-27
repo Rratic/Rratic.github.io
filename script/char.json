@@ -1,0 +1,32 @@
+{
+    "trs":[
+        {
+            "name":"任意",
+            "char":"&forall;",
+            "uni":8704,
+            "link":"FirstOrderLogic.html",
+            "lina":"一阶逻辑"
+        },
+        {
+            "name":"存在",
+            "char":"&exist;",
+            "uni":8707,
+            "link":"FirstOrderLogic.html",
+            "lina":"一阶逻辑"
+        },
+        {
+            "name":"合取",
+            "char":"&and;",
+            "uni":8743,
+            "link":"FirstOrderLogic.html",
+            "lina":"一阶逻辑"
+        },
+        {
+            "name":"析取",
+            "char":"&or;",
+            "uni":8744,
+            "link":"FirstOrderLogic.html",
+            "lina":"一阶逻辑"
+        }
+    ]
+}

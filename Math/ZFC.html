@@ -3,24 +3,41 @@
 
 <head>
     <title>自然科学大厦矗立于此</title>
-    <link rel="stylesheet" type="text/css" href="../css/Mathcss.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="shortcut icon" href="../favicon.ico">
+    <script src="../script/build.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>公理化集合论</h1>
+        <h1>ZFC集合论</h1>
     </header>
     <main>
+        <h2>导入</h2>
         <div id="import">
-            <h2>导入符号</h2>
+            <ul>
+                <li>空集<code>&empty;</code></li>
+                <li>属于<code>&isin;</code>逆：<code>&ni;</code></li>
+                <li>不属于<code>&notin;</code></li>
+                <li>真子集<code>&sub;</code>逆：<code>&sup;</code></li>
+                <li>非真子集<code>&nsub;</code></li>
+                <li>子集<code>&sube;</code>逆：<code>&supe;</code></li>
+                <li>等价<code>&hArr;</code></li>
+                <li>交集<code>&cap;</code></li>
+                <li>并集<code>&cup;</code></li>
+                <li>等于<code>=</code></li>
+                <li>不等于<code>&ne;</code></li>
+            </ul>
+        </div>
+        <div id="build">
+            <h3>定义</h3>
+            <ul class="define">
+                <li>#<code>&notin;</code> : <code>&not;&isin;</code></li>
+                <li>#<code>A&ni;B</code> : <code>B&isin;A</code></li>
+            </ul>
         </div>
     </main>
     <footer>
-        <code>
-            2021,&copy;Rratic整理
-        </code>
-        <br>
         <a href="https://github.com/Rratic/Rratic.github.io">源代码</a>
     </footer>
 </body>
