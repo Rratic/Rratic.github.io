@@ -43,7 +43,6 @@ else fillqueen(tx,ty,tz,"#25AF03");
 tex=tx,tey=ty;tez=tz;
 for(var i=0;i<step;++i){
 tex+=x;tey+=y;tez+=z;
-console.log(tex+","+tey+","+tez);
 map[tex][tey][tez]=1;
 fillqueen(tex,tey,tez,"#7F7F7F");}
 map[mox][moy][moz]=2;
@@ -64,7 +63,6 @@ step=Math.max(Math.abs(mox-tx),Math.abs(moy-ty),Math.abs(moz-tz));var flag=false
 for(var i=0;i<26;++i){if(tx+step*onestep[i][0]==mox&&ty+step*onestep[i][1]==moy&&tz+step*onestep[i][2]==moz)flag=true;}
 if(!flag){window.alert("无效的移动！");return;}
 x=(mox-tx)/step;y=(moy-ty)/step;z=(moz-tz)/step;
-    console.log(x+","+y+","+z);
 if(!canmove(step,x,y,z)){
 window.alert("你被挡住了！");return;}
 showmove(step,x,y,z);
