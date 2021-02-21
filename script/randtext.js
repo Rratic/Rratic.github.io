@@ -8,6 +8,9 @@ var my = [
     '弱小和无知从来就不是一个文明毁灭的原因，傲慢才是。',
     '如无必要，勿增实体。',
     '给岁月以文明，而不是给文明以岁月。',
+    '我们的征途，依旧是星辰大海；所有的故事，不过是人生的隐喻。',
+    '这是一条注定艰难的道路，但在这黑暗之中，我们并不孤独。',
+    '在真理之路上，要不畏艰辛，敢于推翻重来，才不会在错误的道路上越走越远。',
 ];
 function randtext() {
     document.getElementById('randtext').innerHTML = my[Math.floor(Math.random() * my.length)];
